@@ -50,15 +50,17 @@
             <td><%= tasks[i].title%></td>
             <td><%= tasks[i].description%></td>
             <td>
-              <a
-                href="/turn/<%= tasks[i]._id%>"
-                class="btn <%= tasks[i].status ? 'btn-success' : 'btn-dark'%>"
-                >Done</a
-              >
-              <a href="/delete/<%= tasks[i]._id%>" class="btn btn-danger"
-                >Delete</a
-              >
-              <a href="/edit/<%= tasks[i]._id%>" class="btn btn-info">Edit</a>
+                <div class="btn-group d-flex justify-content-center">
+                    <a
+                    href="/turn/<%= tasks[i]._id%>"
+                    class="btn  btn-group-justified <%= tasks[i].status ? 'btn-success' : 'btn-dark'%>"
+                    >Done</a
+                  >
+                  <a href="/delete/<%= tasks[i]._id%>" class="btn btn-danger btn-group-justified"
+                    >Delete</a
+                  >
+                  <a href="/edit/<%= tasks[i]._id%>" class="btn btn-info btn-group-justified">Edit</a>
+                </div>
             </td>
           </tr>
           <%}%>
